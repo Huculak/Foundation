@@ -63,7 +63,8 @@ books.without.four
 
 #Create a variable long.titles...
 
-long.titles <- Length[book > 10 chars]
+long.titles <- book[nchar(book) > 15]
+long.titles
 
 #Part 3 Squares
 
@@ -77,6 +78,15 @@ numbers
 squared.numbers <- numbers^2
 squared.numbers
 
+#Create a variable squared.mean...
 
+squared.mean <- mean(squared.numbers)
+squared.mean
 
+#Create a variable that contains only the values...
+
+squares=function(v){
+  return(v[sapply(v,function(z){sum(z/1:z==z%/%1:z)==2})])
+} 
+squares(numbers)
 
